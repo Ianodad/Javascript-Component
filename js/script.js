@@ -35,11 +35,20 @@ function getElement(event) {
 function printElements(elements) {
 	const stringed = [];
 
-	alert(`There are ${elements.length} tags found in the element selected`);
+	const allTags = {};
+	alert(`There are ${elements.length - 1} tags found in the element selected`);
 
 	elements.forEach((element) => {
+		let tag = JSON.stringify(element.tagName.toLowerCase());
+
+		// // if letter exists, increment otherwise set to 1
+		// stringed[tag] ? (stringed[tag] += 1) : (stringed[tag] = 1);
+		// // console.log(element);
+
 		alert(`"${element.tagName.toLowerCase()}"`);
 	});
+
+	// console.log(allTags);
 	// alert(element.toLowerCase());
 }
 
